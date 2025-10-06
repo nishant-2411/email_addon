@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+beautifulsoup4
+lxml
+transformers
+torch
+sentence-transformers
+spacy
+imapclient
+msal
+requests
+python-dateutil
+faiss-cpu
+pytest
