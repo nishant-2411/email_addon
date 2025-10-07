@@ -1,0 +1,167 @@
+import os
+from typing import List, Dict, Optional
+from datetime import datetime
+from email.utils import parsedate_to_datetime
+
+# --- Define the Target Data Schema (Matches your Pydantic model) ---
+# This ensures that all ingested data conforms to the format your ML pipeline expects.
+class EmailData:
+    def __init__(self, raw_text: str, sender: str, timestamp: str, thread_id: str, subject: str, email_id: str = None):
+        self.email_id = email_id or f"EID_{hash(raw_text)}" # Generate ID if missing
+        self.raw_text = raw_text
+        self.sender = sender
+        self.timestamp = timestamp
+        self.thread_id = thread_id
+        self.subject = subject
+        self.cleaned_text: str = ""  # Placeholder for Phase 2 (Cleaning)
+
+    def to_dict(self) -> Dict:
+        """Converts the object to a dictionary for use in the API or ML pipeline."""
+        return self.__dict__
+
+# --- Credential Handling Utility (MOCK) ---
+# In a real application, you would use a secure vault (e.g., Vault, Kubernetes Secrets).
+def load_credentials(api_type: str) -> Dict[str, str]:
+    """MOCK function to load credentials securely."""
+    print(f"Loading credentials for {api_type}...")
+    if api_type == 'IMAP':
+        return {
+            "HOST": "imap.mockemail.com",
+            "USER": os.environ.get("IMAP_USER", "mock_user@shipcube.com"),
+            "PASSWORD": os.environ.get("IMAP_PASSWORD", "mock_password_123")
+        }
+    elif api_type == 'MS_GRAPH':
+        return {
+            "CLIENT_ID": os.environ.get("GRAPH_CLIENT_ID", "mock-client-id-abc"),
+            "TENANT_ID": os.environ.get("GRAPH_TENANT_ID", "mock-tenant-id-xyz"),
+            "SCOPE": "https://graph.microsoft.com/.default"
+        }
+    return {}
+
+# --- 1. IMAP Ingestion Prototype ---
+class ImapIngestor:
+    """
+    Prototypes IMAP connection and data retrieval logic.
+    """
+    def __init__(self, credentials: Dict):
+        self.credentials = credentials
+        self.is_connected = False
+
+    def connect(self) -> bool:
+        """MOCK: Attempts to establish an IMAP connection."""
+        # In a real setup: import imaplib; self.server = imaplib.IMAP4_SSL(self.credentials["HOST"])
+        # self.server.login(self.credentials["USER"], self.credentials["PASSWORD"])
+        self.is_connected = True
+        print("IMAP connection mocked successfully.")
+        return True
+
+    def fetch_emails(self, mailbox: str = "INBOX", max_emails: int = 10) -> List[EmailData]:
+        """MOCK: Fetches and parses a fixed list of mock emails."""
+        if not self.is_connected:
+            print("ERROR: Must connect first.")
+            return []
+
+        print(f"Mock fetching {max_emails} emails from {mailbox}...")
+        
+        # Simulated raw IMAP email data (simplified for parsing)
+        mock_emails = [
+            {"subject": "URGENT: Container CNTR859828 missing!", "from": "critical_partner@logistics.com", "date": "13 Sep 2025 09:12:00 +0000", "body": "We have a production halt due to missing container CNTR859828. Need immediate escalation. (Thread-3849)", "message-id": "<thread_3849_1>"},
+            {"subject": "Question about PO#PO56889", "from": "vendor@supplychaininc.com", "date": "28 Sep 2025 12:26:00 +0000", "body": "Please confirm delivery status of PO#PO56889. Tracking shows delivered, but we have no proof. (Thread-9792)", "message-id": "<thread_9792_1>"},
+        ]
+        
+        ingested_data: List[EmailData] = []
+        for i, raw_email in enumerate(mock_emails[:max_emails]):
+            # IMAP parsing logic (Extracting headers and body)
+            timestamp_dt = parsedate_to_datetime(raw_email["date"])
+            
+            # Mapping raw data to your defined schema (EmailData)
+            email_obj = EmailData(
+                email_id=f"IMAP_MOCK_{i}",
+                raw_text=raw_email["body"],
+                sender=raw_email["from"],
+                timestamp=timestamp_dt.isoformat(),
+                subject=raw_email["subject"],
+                # Thread ID often derived from 'In-Reply-To' or subject parsing in real life
+                thread_id=raw_email["message-id"].replace("<", "").replace(">", "")
+            )
+            ingested_data.append(email_obj)
+            
+        print(f"Successfully mocked {len(ingested_data)} IMAP emails.")
+        return ingested_data
+
+# --- 2. Microsoft Graph API Ingestion Prototype ---
+class MsGraphIngestor:
+    """
+    Prototypes Microsoft Graph API connection and data retrieval logic using OAuth2.
+    """
+    def __init__(self, credentials: Dict):
+        self.credentials = credentials
+        self.access_token: Optional[str] = None
+
+    def acquire_token(self) -> bool:
+        """MOCK: Simulates acquiring an OAuth2 token."""
+        # In a real setup: Use `requests` to call Azure AD /token endpoint with client_id/secret
+        self.access_token = "MOCK_OAUTH_TOKEN_ABC123"
+        print("MS Graph OAuth2 token acquired mocked successfully.")
+        return True
+
+    def fetch_emails(self, user_id: str = "shipcube_inbox", max_emails: int = 10) -> List[EmailData]:
+        """MOCK: Fetches emails using the Graph API (GET /users/{id}/mailFolders/inbox/messages)."""
+        if not self.access_token:
+            print("ERROR: Must acquire token first.")
+            return []
+
+        print(f"Mock fetching {max_emails} emails for {user_id} via MS Graph...")
+        
+        # Simulated raw Graph API response (simplified JSON structure)
+        mock_graph_response = [
+            {"id": "MSGID_001", "subject": "New quote request for PO44032", "from": {"emailAddress": {"address": "ashley.clark@partner.com"}}, "receivedDateTime": "2025-09-13T04:33:00Z", "bodyPreview": "Thank you for the excellent service on our last shipment. Please provide a quote for our new project related to PO44032.", "conversationId": "thread_4579"},
+            {"id": "MSGID_002", "subject": "Invoice INV-2025-09-01 Query", "from": {"emailAddress": {"address": "accounts@financecorp.com"}}, "receivedDateTime": "2025-09-05T10:00:00Z", "bodyPreview": "We have an issue with the amount on invoice INV-2025-09-01.", "conversationId": "thread_1111"},
+        ]
+        
+        ingested_data: List[EmailData] = []
+        for i, raw_message in enumerate(mock_graph_response[:max_emails]):
+            # Graph API parsing logic (Extracting specific JSON fields)
+            
+            # Mapping raw data to your defined schema (EmailData)
+            email_obj = EmailData(
+                email_id=raw_message["id"],
+                raw_text=raw_message["bodyPreview"], # Use body.content for full body
+                sender=raw_message["from"]["emailAddress"]["address"],
+                timestamp=raw_message["receivedDateTime"],
+                subject=raw_message["subject"],
+                # Graph API provides conversationId which maps well to thread_id
+                thread_id=raw_message["conversationId"]
+            )
+            ingested_data.append(email_obj)
+            
+        print(f"Successfully mocked {len(ingested_data)} MS Graph emails.")
+        return ingested_data
+
+# --- Main Execution Block for Testing ---
+
+if __name__ == "__main__":
+    print("--- Running Email Ingestion Prototype Test ---")
+
+    # 1. IMAP Test
+    print("\n[IMAP INGESTION TEST]")
+    imap_creds = load_credentials('IMAP')
+    imap_ingestor = ImapIngestor(imap_creds)
+    if imap_ingestor.connect():
+        imap_emails = imap_ingestor.fetch_emails()
+        if imap_emails:
+            print("\nExample IMAP Email Data (Dict format):")
+            print(imap_emails[0].to_dict())
+    
+    # 2. MS Graph Test
+    print("\n[MICROSOFT GRAPH INGESTION TEST]")
+    graph_creds = load_credentials('MS_GRAPH')
+    graph_ingestor = MsGraphIngestor(graph_creds)
+    if graph_ingestor.acquire_token():
+        graph_emails = graph_ingestor.fetch_emails()
+        if graph_emails:
+            print("\nExample MS Graph Email Data (Dict format):")
+            print(graph_emails[0].to_dict())
+            
+    print("\n--- Ingestion Prototype Test Complete ---")
+         

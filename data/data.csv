@@ -1,0 +1,413 @@
+email_id,sender,sender_company,timestamp,subject,thread_id,content,priority,sentiment,intent,urgency_keywords,entities
+1,sarah.wilson@globallogistics.com,Supplier Networks,10-09-2025 19:46,Question about invoice #INV9342,thread_5793,"Hi there,
+
+Can you confirm if shipment PO#PO94787 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Sarah Wilson",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO94787'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+2,robert.taylor@freight.com,Supply Chain Inc,28-09-2025 12:26,Delivery confirmation needed for PO#PO56889,thread_9792,"Hi there,
+
+Can you confirm if shipment PO#PO56889 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Robert Taylor",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO56889'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+3,ashley.clark@partner.com,Global Logistics Ltd,13-09-2025 09:12,Emergency: Production halt due to missing parts,thread_3849,"Dear Logistics Team,
+
+Container CNTR859828 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Ashley Clark",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR859828'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+4,david.lee@warehouse.com,Trade Networks,04-10-2025 02:48,Emergency: Production halt due to missing parts,thread_1123,"Hi Team,
+
+We have a critical situation with PO#PO92176. The shipment was supposed to arrive 5 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+David Lee",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO92176'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+5,ashley.clark@partner.com,UK Manufacturing Co,13-09-2025 04:33,Request for quote - new shipment,thread_4579,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO44032. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Ashley Clark",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO44032'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+6,jennifer.davis@import.co,Export Solutions,28-09-2025 00:24,Thank you for excellent service,thread_8499,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Jennifer Davis",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR690652'], 'invoice_numbers': [], 'amounts': []}"
+7,kevin.hall@logistics.com,Import Experts,24-09-2025 22:25,General inquiry about services,thread_7139,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Kevin Hall",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR887743'], 'invoice_numbers': [], 'amounts': []}"
+8,sarah.wilson@globallogistics.com,Shipper Pro,11-09-2025 22:59,Thank you for excellent service,thread_2868,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Sarah Wilson",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR419512'], 'invoice_numbers': [], 'amounts': []}"
+9,amanda.young@supply.net,Global Logistics Ltd,30-09-2025 02:01,Question about invoice #INV4825,thread_8816,"Hello,
+
+I received invoice #INV4825 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Amanda Young",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV4825'], 'amounts': ['$500', '$750', '$50,000']}"
+10,matthew.harris@client.co,Global Logistics Ltd,30-09-2025 03:18,Delivery confirmation needed for PO#PO82615,thread_6525,"Hi there,
+
+Can you confirm if shipment PO#PO82615 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Matthew Harris",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO82615'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+11,michelle.anderson@carrier.com,Partner Industries,14-09-2025 00:29,URGENT: Delayed shipment PO#PO98174,thread_7304,"Hi Team,
+
+We have a critical situation with PO#PO98174. The shipment was supposed to arrive 8 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+Michelle Anderson",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO98174'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+12,anna.garcia@distribution.net,Supplier Networks,26-09-2025 01:40,Thank you for excellent service,thread_4153,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Anna Garcia",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR511942'], 'invoice_numbers': [], 'amounts': []}"
+13,chris.martinez@export.org,AcmeCorp,03-10-2025 06:25,Emergency: Production halt due to missing parts,thread_3811,"Dear Logistics Team,
+
+Container CNTR392678 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Chris Martinez",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR392678'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+14,matthew.harris@client.co,Partner Industries,27-09-2025 21:24,Update requested on shipment status,thread_7870,"Hello,
+
+I received invoice #INV2537 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Matthew Harris",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV2537'], 'amounts': ['$500', '$750', '$50,000']}"
+15,david.lee@warehouse.com,UK Manufacturing Co,21-09-2025 22:17,URGENT: Delayed shipment PO#PO28253,thread_2033,"Dear Logistics Team,
+
+Container CNTR534199 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+David Lee",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO28253'], 'container_ids': ['CNTR534199'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+16,emily.white@vendor.com,Global Logistics Ltd,08-09-2025 04:04,Emergency: Production halt due to missing parts,thread_6800,"Dear Logistics Team,
+
+Container CNTR679850 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Emily White",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR679850'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+17,melissa.wright@cargo.com,Supply Chain Inc,30-09-2025 06:25,URGENT: Delayed shipment PO#PO42330,thread_7316,"Dear Logistics Team,
+
+Container CNTR994873 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Melissa Wright",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO42330'], 'container_ids': ['CNTR994873'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+18,amanda.young@supply.net,Carrier Direct,18-09-2025 14:41,Request for quote - new shipment,thread_3561,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO30282. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Amanda Young",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO30282'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+19,chris.martinez@export.org,Supplier Networks,26-09-2025 22:48,Delivery confirmation needed for PO#PO77175,thread_4898,"Hello,
+
+I received invoice #INV9724 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Chris Martinez",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO77175'], 'container_ids': [], 'invoice_numbers': ['INV9724'], 'amounts': ['$500', '$750', '$50,000']}"
+20,lisa.brown@manufacturer.co.uk,Global Logistics Ltd,09-09-2025 01:59,Thank you for excellent service,thread_4612,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO79804. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Lisa Brown",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO79804'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+21,anna.garcia@distribution.net,Import Experts,03-10-2025 18:14,Request for quote - new shipment,thread_5997,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Anna Garcia",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR203997'], 'invoice_numbers': [], 'amounts': []}"
+22,amanda.young@supply.net,Supply Chain Inc,17-09-2025 12:48,General inquiry about services,thread_4926,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO23584. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Amanda Young",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO23584'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+23,kevin.hall@logistics.com,Import Experts,05-10-2025 12:55,Question about invoice #INV9513,thread_9530,"Hello,
+
+I received invoice #INV9513 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Kevin Hall",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV9513'], 'amounts': ['$500', '$750', '$50,000']}"
+24,david.lee@warehouse.com,Supplier Networks,01-10-2025 21:49,General inquiry about services,thread_2871,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+David Lee",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR862779'], 'invoice_numbers': [], 'amounts': []}"
+25,mike.johnson@supplier.net,Cargo Express,28-09-2025 15:22,CRITICAL: Missing cargo container CNTR883196,thread_9516,"Dear Logistics Team,
+
+Container CNTR883196 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Mike Johnson",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR883196'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+26,robert.taylor@freight.com,Logistics Central,25-09-2025 02:29,URGENT: Delayed shipment PO#PO31045,thread_7357,"Dear Logistics Team,
+
+Container CNTR593417 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Robert Taylor",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO31045'], 'container_ids': ['CNTR593417'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+27,david.lee@warehouse.com,Supplier Networks,06-10-2025 13:29,URGENT: Delayed shipment PO#PO12104,thread_2021,"Hi Team,
+
+We have a critical situation with PO#PO12104. The shipment was supposed to arrive 10 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+David Lee",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO12104'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+28,stephanie.walker@buyer.org,Trade Networks,06-10-2025 00:04,Emergency: Production halt due to missing parts,thread_8742,"Dear Logistics Team,
+
+Container CNTR631603 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Stephanie Walker",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR631603'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+29,brandon.king@transport.co,Freight Masters,28-09-2025 13:07,CRITICAL: Missing cargo container CNTR953794,thread_8348,"Dear Logistics Team,
+
+Container CNTR953794 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Brandon King",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR953794'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+30,kevin.hall@logistics.com,Freight Masters,25-09-2025 17:09,Question about invoice #INV2537,thread_3932,"Hello,
+
+I received invoice #INV2537 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Kevin Hall",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV2537'], 'amounts': ['$500', '$750', '$50,000']}"
+31,james.thomas@shipper.net,Carrier Direct,02-10-2025 18:32,CRITICAL: Missing cargo container CNTR362778,thread_8770,"Hi Team,
+
+We have a critical situation with PO#PO11722. The shipment was supposed to arrive 6 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+James Thomas",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO11722'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+32,emily.white@vendor.com,Trade Networks,16-09-2025 08:58,Delivery confirmation needed for PO#PO25655,thread_7162,"Hi there,
+
+Can you confirm if shipment PO#PO25655 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Emily White",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO25655'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+33,david.lee@warehouse.com,Cargo Express,14-09-2025 21:38,Request for quote - new shipment,thread_6141,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+David Lee",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR216934'], 'invoice_numbers': [], 'amounts': []}"
+34,lisa.brown@manufacturer.co.uk,AcmeCorp,04-10-2025 04:08,URGENT: Delayed shipment PO#PO45075,thread_8863,"Hi Team,
+
+We have a critical situation with PO#PO45075. The shipment was supposed to arrive 9 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+Lisa Brown",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO45075'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+35,james.thomas@shipper.net,Export Solutions,15-09-2025 12:24,General inquiry about services,thread_7435,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+James Thomas",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR720424'], 'invoice_numbers': [], 'amounts': []}"
+36,matthew.harris@client.co,Cargo Express,13-09-2025 01:59,Delivery confirmation needed for PO#PO18904,thread_3364,"Hi there,
+
+Can you confirm if shipment PO#PO18904 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Matthew Harris",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO18904'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+37,chris.martinez@export.org,Partner Industries,23-09-2025 13:08,Update requested on shipment status,thread_5341,"Hello,
+
+I received invoice #INV4669 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Chris Martinez",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV4669'], 'amounts': ['$500', '$750', '$50,000']}"
+38,matthew.harris@client.co,Partner Industries,12-09-2025 15:37,Request for quote - new shipment,thread_3855,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO79183. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Matthew Harris",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO79183'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+39,melissa.wright@cargo.com,Client Corp,03-10-2025 16:23,Update requested on shipment status,thread_3053,"Hello,
+
+I received invoice #INV2709 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+Melissa Wright",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV2709'], 'amounts': ['$500', '$750', '$50,000']}"
+40,james.thomas@shipper.net,Client Corp,23-09-2025 06:36,Question about invoice #INV5696,thread_3975,"Hello,
+
+I received invoice #INV5696 but there seems to be a discrepancy in the freight charges. The quoted amount was $500 but the invoice shows $750.
+
+Can you please clarify this difference?
+
+Thanks,
+James Thomas",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': [], 'container_ids': [], 'invoice_numbers': ['INV5696'], 'amounts': ['$500', '$750', '$50,000']}"
+41,jennifer.davis@import.co,Shipper Pro,06-09-2025 02:39,Question about invoice #INV2220,thread_9843,"Hi there,
+
+Can you confirm if shipment PO#PO48635 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Jennifer Davis",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO48635'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+42,jennifer.davis@import.co,Export Solutions,14-09-2025 19:54,Question about invoice #INV4128,thread_5112,"Hi there,
+
+Can you confirm if shipment PO#PO56728 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Jennifer Davis",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO56728'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+43,emily.white@vendor.com,Cargo Express,27-09-2025 12:14,URGENT: Delayed shipment PO#PO30287,thread_3130,"Dear Logistics Team,
+
+Container CNTR574651 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Emily White",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO30287'], 'container_ids': ['CNTR574651'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+44,kevin.hall@logistics.com,Supply Chain Inc,05-10-2025 13:14,Thank you for excellent service,thread_5290,"Hello,
+
+We're planning a new shipment route from Mumbai to New York. Can you provide a quote for 20 containers (40ft each) with expected delivery in 3-4 weeks?
+
+No rush on this - please send the quote by end of next week.
+
+Thanks,
+Kevin Hall",LOW,POSITIVE,REQUEST,[],"{'po_numbers': [], 'container_ids': ['CNTR826997'], 'invoice_numbers': [], 'amounts': []}"
+45,james.thomas@shipper.net,Cargo Express,19-09-2025 08:04,Request for quote - new shipment,thread_2352,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO94944. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+James Thomas",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO94944'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+46,mike.johnson@supplier.net,Carrier Direct,14-09-2025 22:46,Thank you for excellent service,thread_2120,"Dear Team,
+
+I wanted to thank you for the excellent handling of our recent shipment PO#PO63896. Everything arrived on time and in perfect condition.
+
+Looking forward to continuing our partnership.
+
+Best regards,
+Mike Johnson",LOW,POSITIVE,REQUEST,[],"{'po_numbers': ['PO63896'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+47,melissa.wright@cargo.com,Vendor Connect,24-09-2025 22:36,Emergency: Production halt due to missing parts,thread_4400,"Hi Team,
+
+We have a critical situation with PO#PO91866. The shipment was supposed to arrive 6 days ago and our production line is completely stopped. We need immediate updates on the ETA and compensation for the delays.
+
+This is causing significant financial losses.
+
+Urgent response needed.
+
+Best regards,
+Melissa Wright",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': ['PO91866'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+48,jennifer.davis@import.co,Client Corp,17-09-2025 18:26,Delivery confirmation needed for PO#PO70440,thread_2625,"Hi there,
+
+Can you confirm if shipment PO#PO70440 was delivered successfully? Our warehouse team hasn't received it yet but the tracking shows delivered.
+
+Please verify the delivery address and provide proof of delivery.
+
+Best,
+Jennifer Davis",MEDIUM,NEUTRAL,QUERY,[],"{'po_numbers': ['PO70440'], 'container_ids': [], 'invoice_numbers': [], 'amounts': []}"
+49,david.lee@warehouse.com,Shipper Pro,18-09-2025 07:11,Emergency: Production halt due to missing parts,thread_6538,"Dear Logistics Team,
+
+Container CNTR435949 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+David Lee",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR435949'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
+50,amanda.young@supply.net,AcmeCorp,28-09-2025 11:41,Emergency: Production halt due to missing parts,thread_1693,"Dear Logistics Team,
+
+Container CNTR109695 has gone missing and we cannot locate it in the tracking system. This contains $50,000 worth of inventory that we need for next week's orders.
+
+Please escalate this immediately and provide tracking updates every 2 hours.
+
+Thanks,
+Amanda Young",HIGH,NEGATIVE,COMPLAINT,"['URGENT', 'CRITICAL', 'Emergency', 'immediate']","{'po_numbers': [], 'container_ids': ['CNTR109695'], 'invoice_numbers': [], 'amounts': ['$500', '$750', '$50,000']}"
